@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CI/CD Pipeline Setup - Ci Htin Aung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+        background: linear-gradient(135deg, #4a4948 0%, #9a9696 50%, #292424 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+  <div class="container mx-auto px-4 py-16">
+    <a href="../index.html" class="text-black inline-flex items-center hover:text-white mb-8">
+      ← Back to Portfolio
+    </a>
+
+    <article class="max-w-5xl mx-auto">
+      <h1 class="text-5xl text-white font-bold mb-8">CI/CD Pipeline Setup</h1>
+
+      <div class="glass-card p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl text-black font-bold mb-4">Overview</h2>
+        <p class="text-lg text-black mb-6">
+          Designed and implemented a Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions and Docker to automate testing, building, and deployment of web applications. The pipeline ensures code quality and reduces release friction.
+        </p>
+
+        <h3 class="text-xl text-black font-bold mb-3">Key Features</h3>
+        <ul class="list-disc list-inside mb-6 space-y-2 text-black">
+          <li>Linting, testing, and build checks on every push and pull request</li>
+          <li>Dockerized the entire Node.js + React app</li>
+          <li>Set up GitHub Actions to deploy backend to Render and frontend to Netlify</li>
+          <li>Configured staging and production environments</li>
+          <li>Slack notification integration for build status</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Technology Stack</h3>
+        <ul class="list-disc list-inside mb-6 space-y-2 text-black">
+          <li><strong>CI/CD Tool:</strong> GitHub Actions</li>
+          <li><strong>Containerization:</strong> Docker & Docker Compose</li>
+          <li><strong>Hosting:</strong> Netlify (Frontend), Render (Backend)</li>
+          <li><strong>Testing:</strong> Jest, React Testing Library, Supertest</li>
+          <li><strong>Monitoring:</strong> Slack webhook notifications</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Challenges & Solutions</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Challenge:</strong> Synchronizing backend/frontend deployment order</li>
+          <li><strong>Solution:</strong> Used workflow dependencies and manual approval gates</li>
+          <li><strong>Challenge:</strong> Long build times during Docker image creation</li>
+          <li><strong>Solution:</strong> Optimized Docker layers and used cache actions</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Impact</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Reduced deployment errors by 90%</li>
+          <li>Enabled teammates to safely push features with confidence</li>
+          <li>Automated all post-merge steps including tagging and deployment</li>
+        </ul>
+
+        
+      </div>
+    </article>
+  </div>
+</body>
+</html>

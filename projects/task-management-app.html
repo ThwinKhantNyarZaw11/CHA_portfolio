@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Web App - Ci Htin Aung </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+        background: linear-gradient(135deg, #4a4948 0%, #9a9696 50%, #292424 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+  <div class="container mx-auto px-4 py-16">
+    <a href="../index.html" class="inline-flex items-center text-black hover:text-white mb-8">
+      ← Back to Portfolio
+    </a>
+
+    <article class="max-w-5xl mx-auto">
+      <h1 class="text-5xl font-bold mb-8">Task Management Web App</h1>
+
+      <div class="glass-card p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-4 text-black">Overview</h2>
+        <p class="text-lg mb-6 text-black">
+          Designed and developed a full-featured task management web application to help teams organize their work, collaborate on projects, and increase productivity.
+          Built using the MERN stack (MongoDB, Express.js, React, Node.js), the app includes user authentication, task creation/editing, real-time status updates, and role-based access control.
+        </p>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Key Features</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Secure user registration and login with JWT</li>
+          <li>Create, edit, assign, and delete tasks</li>
+          <li>Real-time task updates using Socket.io</li>
+          <li>Search, filter, and sort tasks by deadline or status</li>
+          <li>Role-based access for admins and contributors</li>
+          <li>Responsive design for desktop and mobile</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Technical Stack</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Frontend:</strong> React, Tailwind CSS, React Router</li>
+          <li><strong>Backend:</strong> Node.js, Express.js</li>
+          <li><strong>Database:</strong> MongoDB with Mongoose ODM</li>
+          <li><strong>Authentication:</strong> JWT, bcrypt</li>
+          <li><strong>Real-time Communication:</strong> Socket.io</li>
+          <li><strong>Deployment:</strong> Render for backend, Netlify for frontend</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Challenges & Solutions</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Challenge:</strong> Ensuring real-time task updates across users</li>
+          <li><strong>Solution:</strong> Used Socket.io to broadcast task changes instantly across connected clients</li>
+          <li><strong>Challenge:</strong> Avoiding duplicate task submissions</li>
+          <li><strong>Solution:</strong> Added optimistic UI feedback and debouncing logic in React</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Impact</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Streamlined project workflows and communication for small teams</li>
+          <li>Used as a team tool during a university group project with real-time collaboration</li>
+          <li>Praised by users for its intuitive UI and quick response times</li>
+        </ul>
+
+      </div>
+    </article>
+  </div>
+</body>
+</html>

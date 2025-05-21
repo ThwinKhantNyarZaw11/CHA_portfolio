@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Chat App - Ci Htin Aung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #4a4948 0%, #9a9696 50%, #292424 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+    body {
+      color: black;
+    }
+    a {
+      color: #4a4a4a;
+    }
+    a:hover {
+      color: #000000;
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-black">
+  <div class="container mx-auto px-4 py-16">
+    <a href="../index.html" class="text-black inline-flex items-center hover:text-white mb-8">
+      ← Back to Portfolio
+    </a>
+
+    <article class="max-w-5xl mx-auto">
+      <h1 class="text-5xl text-white font-bold mb-8">Real-Time Chat Application</h1>
+
+      <div class="glass-card p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Overview</h2>
+        <p class="text-lg mb-6">
+          Built a secure and high-performance real-time chat application that enables users to register, authenticate, join public or private chat rooms, and exchange instant messages with real-time updates.
+          The app showcases event-driven architecture, stateful WebSocket communication, and smooth frontend-backend synchronization. It emphasizes data consistency, responsiveness, and user engagement at scale.
+        </p>
+
+        <h3 class="text-xl font-bold mb-3">Key Features</h3>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Account registration and login with persistent session management</li>
+          <li>Support for both one-on-one and group conversations</li>
+          <li>Real-time bidirectional messaging powered by Socket.io</li>
+          <li>Typing indicators, user presence tracking, and message timestamps</li>
+          <li>Full message history stored in a MongoDB database</li>
+          <li>Mobile-friendly responsive interface with light/dark mode switch</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3">Technology Stack</h3>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li><strong>Frontend:</strong> React, Tailwind CSS, Axios</li>
+          <li><strong>Backend:</strong> Node.js, Express.js, Socket.io</li>
+          <li><strong>Database:</strong> MongoDB with Mongoose for schema management</li>
+          <li><strong>Authentication:</strong> JWT tokens and bcrypt for password hashing</li>
+          <li><strong>Deployment:</strong> Netlify (frontend) and Render (backend)</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3">Challenges & Solutions</h3>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li><strong>Challenge:</strong> Managing multiple concurrent user sessions without conflicts</li>
+          <li><strong>Solution:</strong> Implemented isolated Socket.io rooms and namespaces for secure session handling</li>
+          <li><strong>Challenge:</strong> Preventing unauthorized message access and injection</li>
+          <li><strong>Solution:</strong> Applied route protection and socket middleware authentication using JWT</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3">Impact</h3>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Enabled real-time collaboration and communication for internal teams</li>
+          <li>Helped build foundational knowledge in real-time web technologies and sockets</li>
+          <li>The project backend structure was reused in a multiplayer application prototype</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

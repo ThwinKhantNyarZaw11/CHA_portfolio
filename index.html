@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ci Htin Aung - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.081);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1000;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4a4948 0%, #9a9696 50%, #292424 100%);
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .profile-img {
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="flex justify-center pt-4 fixed w-full top-0 z-50">
+        <nav class="glass-nav rounded-full px-8 py-3 w-full max-w-2xl mx-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-xl text-black font-bold">Ci Htin Aung</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-black transition-colors">Home</a>
+                    <a href="#about" class="hover:text-black transition-colors">About</a>
+                    <a href="#projects" class="hover:text-black transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-black transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-4 right-4 hidden flex-col glass-card rounded-lg p-4 z-40">
+        <a href="#home" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Home</a>
+        <a href="#about" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">About</a>
+        <a href="#projects" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Projects</a>
+        <a href="#contact" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Contact</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-4 gradient-bg">
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/img4.jpg"
+                     alt="Project Background"
+                     class="w-full h-full object-cover opacity-40">
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-10 glass-card p-10 rounded-2xl backdrop-blur-sm shadow-lg max-w-4xl mx-auto">
+                
+                <!-- Profile Image -->
+                <div class="flex justify-center md:justify-start">
+                    <img src="./assets/Ci Htin Aung.jpg"
+                         alt="Ci Htin Aung"
+                         class="w-48 h-48 rounded-full object-cover border-4 border-black-400 shadow-md">
+                </div>
+                
+                <!-- Info Section -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl text-black font-bold mb-4 ">Ci Htin Aung</h1>
+                    <p class="text-xl text-black mb-4 ">Software Engineer | Freelancer</p>
+                    <p class="text-lg text-black ">ACETECH NETWORK & SECURITY SOLUTION COMPANY LIMITED</p>
+                </div>
+        
+            </div>
+        </section>
+        
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen flex items-center justify-center px-4 py-20">
+            <div class="max-w-3xl glass-card p-10 rounded-2xl backdrop-blur-sm shadow-lg">
+                <h2 class="text-4xl text-black font-bold mb-8 text-center">About Me</h2>
+                <p class="text-lg text-black leading-relaxed">
+                    I’m a passionate Software Engineer with a sharp focus on building efficient, scalable, and user-centric applications. With a strong foundation in full-stack development and a problem-solving mindset, I thrive in fast-paced environments where innovation meets impact. I enjoy turning complex challenges into clean, maintainable code—whether on the front end, back end, or anywhere in between.
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen px-4 py-20 relative">
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/img5.jpg"
+                     alt="Project Background"
+                     class="w-full h-full object-cover opacity-50">
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-4xl text-black font-bold mb-12 text-center">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+                    <a href="projects/task-management-app.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl text-black font-bold mb-4">Task Management Web App</h3>
+                        <p class="text-black">Built a full-stack task tracker with user auth, real-time updates, and REST API</p>
+                    </a>
+            
+                    <a href="projects/ecommerce-platform.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl text-black font-bold mb-4">E-Commerce Platform</h3>
+                        <p class="text-black">Developed scalable product catalog, cart, and payment flow using React & Node.js</p>
+                    </a>
+            
+                    <a href="projects/chat-application.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl text-black font-bold mb-4">Real-Time Chat App</h3>
+                        <p class="text-black">Implemented socket-based messaging system with WebSocket and Express</p>
+                    </a>
+            
+                    <a href="projects/api-integration.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl text-black font-bold mb-4">3rd Party API Integration</h3>
+                        <p class="text-black">Connected multiple APIs (weather, news, currency) and handled edge cases</p>
+                    </a>
+            
+                    <a href="projects/ci-cd-pipeline.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl text-black font-bold mb-4">CI/CD Pipeline Setup</h3>
+                        <p class="text-black">Automated deployment workflow using GitHub Actions and Docker</p>
+                    </a>
+            
+                    <a href="projects/database-optimization.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl text-black font-bold mb-4">Database Optimization Project</h3>
+                        <p class="text-black">Improved SQL queries and indexing strategy to reduce response time by 60%</p>
+                    </a>
+            
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen flex items-center justify-center px-4 py-20">
+            <div class="text-center glass-card p-10 rounded-2xl backdrop-blur-sm shadow-lg max-w-3xl">
+                <h2 class="text-4xl text-black font-bold mb-8">Contact Me</h2>
+                <div class="space-y-4">
+                    <p class="text-lg">
+                        <span class="font-bold text-black">Email:</span>
+                        <a href="mailto:cihtinaung289.cha@gmail.com" class="text-black hover:text-white">cihtinaung289.cha@gmail.com</a>
+                    </p>
+                    <p class="text-lg">
+                        <span class="font-bold text-black">Phone:</span>
+                        <a href="tel:06-100-517-75" class="text-black hover:text-white">06-100-517-75</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

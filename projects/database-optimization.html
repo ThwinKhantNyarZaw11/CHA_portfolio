@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Database Optimization Project - Ci Htin Aung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+        background: linear-gradient(135deg, #4a4948 0%, #9a9696 50%, #292424 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+  <div class="container mx-auto px-4 py-16">
+    <a href="../index.html" class="inline-flex items-center text-black hover:text-white mb-8">
+      ← Back to Portfolio
+    </a>
+
+    <article class="max-w-5xl mx-auto ">
+      <h1 class="text-5xl font-bold mb-8">Database Optimization Project</h1>
+
+      <div class="glass-card p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-4 text-black">Overview</h2>
+        <p class="text-lg mb-6 text-black">
+          Optimized database performance for a content-heavy application by improving query structures, indexing strategies, and database schema. Reduced overall response times and improved scalability for future growth.
+        </p>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Key Improvements</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Refactored complex SQL joins for better execution plans</li>
+          <li>Added compound indexes based on query usage patterns</li>
+          <li>Reduced redundant data and normalized several tables</li>
+          <li>Implemented query caching using Redis for repeated reads</li>
+          <li>Optimized pagination logic for large datasets</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Technology Stack</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Database:</strong> PostgreSQL, MySQL (migrated MySQL to PostgreSQL)</li>
+          <li><strong>ORM:</strong> Sequelize, TypeORM</li>
+          <li><strong>Caching:</strong> Redis for key-based query caching</li>
+          <li><strong>Monitoring:</strong> pg_stat_statements, slow query logs</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Challenges & Solutions</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Challenge:</strong> High query latency on dashboard endpoints</li>
+          <li><strong>Solution:</strong> Analyzed execution plans and introduced proper indexing and materialized views</li>
+          <li><strong>Challenge:</strong> Slow count queries for analytics</li>
+          <li><strong>Solution:</strong> Used background jobs to precompute aggregate statistics</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Impact</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Reduced average query time by 60%</li>
+          <li>Improved scalability for 10K+ concurrent users</li>
+          <li>Boosted user satisfaction with faster data access</li>
+        </ul>
+
+        
+      </div>
+    </article>
+  </div>
+</body>
+</html>

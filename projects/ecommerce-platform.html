@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Platform - Ci Htin Aung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+        background: linear-gradient(135deg, #4a4948 0%, #9a9696 50%, #292424 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+  <div class="container mx-auto px-4 py-16">
+    <a href="../index.html" class="inline-flex items-center text-black hover:text-white mb-8">
+      ← Back to Portfolio
+    </a>
+
+    <article class="max-w-5xl mx-auto">
+      <h1 class="text-5xl font-bold mb-8">E-Commerce Platform</h1>
+
+      <div class="glass-card p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-4 text-black">Overview</h2>
+        <p class="text-lg mb-6 text-black">
+          Developed a full-featured e-commerce web application supporting user authentication, dynamic product browsing, cart management, and secure checkout. The platform was designed with scalability and maintainability in mind, using a modular architecture and RESTful APIs.
+        </p>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Key Features</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Product listings with filters, search, and pagination</li>
+          <li>Shopping cart with real-time price updates</li>
+          <li>User signup/login with password hashing and JWT</li>
+          <li>Admin dashboard to manage inventory and orders</li>
+          <li>Stripe payment gateway integration</li>
+          <li>Order confirmation and email receipts</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Tech Stack</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Frontend:</strong> React, Redux Toolkit, Tailwind CSS</li>
+          <li><strong>Backend:</strong> Node.js, Express.js</li>
+          <li><strong>Database:</strong> MongoDB with Mongoose</li>
+          <li><strong>Authentication:</strong> JWT, bcrypt</li>
+          <li><strong>Payments:</strong> Stripe API</li>
+          <li><strong>Deployment:</strong> Vercel (frontend), Render (backend)</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Challenges & Solutions</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Challenge:</strong> Preventing unauthorized product edits</li>
+          <li><strong>Solution:</strong> Implemented RBAC (Role-Based Access Control) for admin-only routes</li>
+          <li><strong>Challenge:</strong> Handling async cart and checkout operations</li>
+          <li><strong>Solution:</strong> Used Redux middleware to manage state and error handling</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3 text-black">Impact</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Demo used in client presentations and mock sales pitches</li>
+          <li>Successfully handled 1000+ product entries with optimized loading</li>
+          <li>Built re-usable components for future SaaS projects</li>
+        </ul>
+
+        
+      </div>
+    </article>
+  </div>
+</body>
+</html>

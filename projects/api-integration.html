@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3rd Party API Integration - Ci Htin Aung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #4a4948 0%, #9a9696 50%, #292424 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+  <div class="container mx-auto px-4 py-16">
+    <a href="../index.html" class="inline-flex items-center text-black hover:text-white mb-8">
+      ← Back to Portfolio
+    </a>
+
+    <article class="max-w-5xl mx-auto">
+      <h1 class="text-5xl font-bold mb-8">3rd Party API Integration Dashboard</h1>
+
+      <div class="glass-card p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl text-black font-bold mb-4">Overview</h2>
+        <p class="text-lg text-black mb-6">
+          Developed a modular dashboard application that integrates and visualizes data from multiple public APIs, including real-time weather, top news headlines, currency exchange rates, and GitHub activity. This project showcases advanced API consumption, error handling, caching strategies, and responsive UI updates using modern React patterns. It was designed to demonstrate proficiency in working with asynchronous data sources and delivering a smooth user experience under varying network conditions.
+        </p>
+
+        <h3 class="text-xl text-black font-bold mb-3">Key Features</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Seamlessly integrates multiple REST APIs (OpenWeatherMap, NewsAPI, Fixer.io, GitHub REST)</li>
+          <li>Utilizes Axios with async/await for streamlined and maintainable data fetching</li>
+          <li>Supports real-time geolocation-based weather updates and custom city queries</li>
+          <li>Implements response caching to enhance speed and reduce redundant API calls</li>
+          <li>Robust error boundaries with graceful UI fallbacks for failed or slow responses</li>
+        </ul>
+
+        <h3 class="text-xl text-black font-bold mb-3">Technology Stack</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Frontend:</strong> React, Tailwind CSS</li>
+          <li><strong>State Management:</strong> React Context API with useReducer for predictable state flow</li>
+          <li><strong>APIs Used:</strong> OpenWeatherMap, NewsAPI.org, Fixer.io, GitHub REST</li>
+          <li><strong>Security:</strong> Environment variables (.env) with backend proxying to protect API keys</li>
+        </ul>
+
+        <h3 class="text-xl text-black font-bold mb-3">Challenges & Solutions</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li><strong>Challenge:</strong> Synchronizing multiple API requests on initial load</li>
+          <li><strong>Solution:</strong> Leveraged <code>Promise.all</code> to parallelize requests and render only when all data was available</li>
+          <li><strong>Challenge:</strong> API rate limits and inconsistent availability</li>
+          <li><strong>Solution:</strong> Implemented debouncing, fallback messages, cache layers, and retry logic to ensure reliability</li>
+        </ul>
+
+        <h3 class="text-xl text-black font-bold mb-3">Impact</h3>
+        <ul class="list-disc list-inside text-black mb-6 space-y-2">
+          <li>Demonstrated production-ready API integration practices and UI resilience techniques</li>
+          <li>Improved proficiency in asynchronous JavaScript, network handling, and modular React architecture</li>
+          <li>Set the foundation for reusable patterns later adopted in other dashboard-based applications</li>
+        </ul>
+
+      </div>
+    </article>
+  </div>
+</body>
+</html>
